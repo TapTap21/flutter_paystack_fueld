@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_paystack/src/common/card_utils.dart';
-import 'package:flutter_paystack/src/common/utils.dart';
-import 'package:flutter_paystack/src/models/card.dart';
-import 'package:flutter_paystack/src/widgets/buttons.dart';
-import 'package:flutter_paystack/src/widgets/input/cvc_field.dart';
-import 'package:flutter_paystack/src/widgets/input/date_field.dart';
-import 'package:flutter_paystack/src/widgets/input/number_field.dart';
+import 'package:flutter_paystack_fueld/src/common/card_utils.dart';
+import 'package:flutter_paystack_fueld/src/common/utils.dart';
+import 'package:flutter_paystack_fueld/src/models/card.dart';
+import 'package:flutter_paystack_fueld/src/widgets/buttons.dart';
+import 'package:flutter_paystack_fueld/src/widgets/input/cvc_field.dart';
+import 'package:flutter_paystack_fueld/src/widgets/input/date_field.dart';
+import 'package:flutter_paystack_fueld/src/widgets/input/number_field.dart';
 
 class CardInput extends StatefulWidget {
   final String buttonText;
@@ -168,7 +168,7 @@ class _CardInputState extends State<CardInput> {
         key: Key("IssuerIcon"),
         height: 15,
         width: 30,
-        package: 'flutter_paystack',
+        package: 'flutter_paystack_fueld',
       );
     } else {
       widget = defaultIcon;

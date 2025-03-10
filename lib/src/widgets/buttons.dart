@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_paystack/src/widgets/common/extensions.dart';
+import 'package:flutter_paystack_fueld/src/widgets/common/extensions.dart';
 
 class WhiteButton extends _BaseButton {
   final bool flat;
@@ -119,7 +119,9 @@ class _BaseButton extends StatelessWidget {
                           children: <Widget>[
                             new Icon(
                               iconData,
-                              color: textStyle.color!.withOpacity(0.5),
+                              color: textStyle.color != null
+                                  ? textStyle.color!.withAlpha((0.5 * 255).toInt())
+                                  : Colors.black.withOpacity(0.5),
                             ),
                             const SizedBox(width: 2.0),
                             textWidget,

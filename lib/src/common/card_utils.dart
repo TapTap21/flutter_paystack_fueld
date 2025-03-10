@@ -1,6 +1,6 @@
-import 'package:flutter_paystack/src/common/exceptions.dart';
-import 'package:flutter_paystack/src/common/string_utils.dart';
-import 'package:flutter_paystack/src/models/card.dart';
+import 'package:flutter_paystack_fueld/src/common/exceptions.dart';
+import 'package:flutter_paystack_fueld/src/common/string_utils.dart';
+import 'package:flutter_paystack_fueld/src/models/card.dart';
 
 class CardUtils {
   static bool isWholeNumberPositive(String? value) {

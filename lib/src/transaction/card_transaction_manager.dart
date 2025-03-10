@@ -1,16 +1,16 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_paystack/src/api/model/transaction_api_response.dart';
-import 'package:flutter_paystack/src/api/request/card_request_body.dart';
-import 'package:flutter_paystack/src/api/request/validate_request_body.dart';
-import 'package:flutter_paystack/src/api/service/contracts/cards_service_contract.dart';
-import 'package:flutter_paystack/src/common/exceptions.dart';
-import 'package:flutter_paystack/src/common/my_strings.dart';
-import 'package:flutter_paystack/src/common/paystack.dart';
-import 'package:flutter_paystack/src/models/charge.dart';
-import 'package:flutter_paystack/src/models/checkout_response.dart';
-import 'package:flutter_paystack/src/transaction/base_transaction_manager.dart';
+import 'package:flutter_paystack_fueld/src/api/model/transaction_api_response.dart';
+import 'package:flutter_paystack_fueld/src/api/request/card_request_body.dart';
+import 'package:flutter_paystack_fueld/src/api/request/validate_request_body.dart';
+import 'package:flutter_paystack_fueld/src/api/service/contracts/cards_service_contract.dart';
+import 'package:flutter_paystack_fueld/src/common/exceptions.dart';
+import 'package:flutter_paystack_fueld/src/common/my_strings.dart';
+import 'package:flutter_paystack_fueld/src/common/paystack.dart';
+import 'package:flutter_paystack_fueld/src/models/charge.dart';
+import 'package:flutter_paystack_fueld/src/models/checkout_response.dart';
+import 'package:flutter_paystack_fueld/src/transaction/base_transaction_manager.dart';
 
 class CardTransactionManager extends BaseTransactionManager {
   late ValidateRequestBody validateRequestBody;

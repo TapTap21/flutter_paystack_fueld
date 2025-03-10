@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_paystack/src/widgets/common/extensions.dart';
+import 'package:flutter_paystack_fueld/src/widgets/common/extensions.dart';
 
 class BaseTextField extends StatelessWidget {
   final Widget? suffix;

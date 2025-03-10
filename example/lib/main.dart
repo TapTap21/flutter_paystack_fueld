@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_paystack/flutter_paystack.dart';
+import 'package:flutter_paystack_fueld/flutter_paystack_fueld.dart';
 import 'package:http/http.dart' as http;
 
 // To get started quickly, change this to your heroku deployment of

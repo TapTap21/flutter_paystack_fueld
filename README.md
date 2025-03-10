@@ -1,13 +1,13 @@
 # :credit_card: Paystack Plugin for Flutter
 
-[![build status](https://img.shields.io/github/workflow/status/wilburt/flutter_paystack/Build%20and%20Test)](https://github.com/wilburt/flutter_paystack/actions?query=Build+and+test)
-[![Coverage Status](https://coveralls.io/repos/github/wilburt/flutter_paystack/badge.svg?branch=master)](https://coveralls.io/github/wilburt/flutter_paystack?branch=master)
-[![pub package](https://img.shields.io/pub/v/flutter_paystack.svg)](https://pub.dartlang.org/packages/flutter_paystack)
+[![build status](https://img.shields.io/github/workflow/status/wilburt/flutter_paystack_fueld/Build%20and%20Test)](https://github.com/wilburt/flutter_paystack_fueld/actions?query=Build+and+test)
+[![Coverage Status](https://coveralls.io/repos/github/wilburt/flutter_paystack_fueld/badge.svg?branch=master)](https://coveralls.io/github/wilburt/flutter_paystack_fueld?branch=master)
+[![pub package](https://img.shields.io/pub/v/flutter_paystack_fueld.svg)](https://pub.dartlang.org/packages/flutter_paystack_fueld)
 
 
 <p>
-    <img src="https://raw.githubusercontent.com/wilburt/flutter_paystack/master/screenshots/card_payment.png" width="200px" height="auto" hspace="20"/>
-    <img src="https://raw.githubusercontent.com/wilburt/flutter_paystack/master/screenshots/bank_payment.png" width="200px" height="auto" hspace="20"/>
+    <img src="https://raw.githubusercontent.com/wilburt/flutter_paystack_fueld/master/screenshots/card_payment.png" width="200px" height="auto" hspace="20"/>
+    <img src="https://raw.githubusercontent.com/wilburt/flutter_paystack_fueld/master/screenshots/bank_payment.png" width="200px" height="auto" hspace="20"/>
 </p>
 
 
@@ -15,12 +15,12 @@ A Flutter plugin for making payments via Paystack Payment Gateway. Fully
 supports Android and iOS.
 
 ## :rocket: Installation
-To use this plugin, add `flutter_paystack` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
+To use this plugin, add `flutter_paystack_fueld` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
 Then initialize the plugin preferably in the `initState` of your widget.
 
 ``` dart
-import 'package:flutter_paystack/flutter_paystack.dart';
+import 'package:flutter_paystack_fueld/flutter_paystack_fueld.dart';
 
 class _PaymentPageState extends State<PaymentPage> {
   var publicKey = '[YOUR_PAYSTACK_PUBLIC_KEY]';
@@ -109,7 +109,7 @@ You can then create a `Charge` object with the access code and card details. The
   }
 ```
 The transaction is successful if `response.status` is true. Please, see the documentation 
-of [CheckoutResponse](https://pub.dev/documentation/flutter_paystack/latest/flutter_paystack/CheckoutResponse-class.html)
+of [CheckoutResponse](https://pub.dev/documentation/flutter_paystack_fueld/latest/flutter_paystack_fueld/CheckoutResponse-class.html)
 for more information. 
 
 
@@ -167,12 +167,12 @@ Paystack provides tons of [payment cards](https://developers.paystack.co/docs/te
 ## :arrow_forward: Running Example project
 For help getting started with Flutter, view the online [documentation](https://flutter.io/).
 
-An [example project](https://github.com/wilburt/flutter_paystack/tree/master/example) has been provided in this plugin.
+An [example project](https://github.com/wilburt/flutter_paystack_fueld/tree/master/example) has been provided in this plugin.
 Clone this repo and navigate to the **example** folder. Open it with a supported IDE or execute `flutter run` from that folder in terminal.
 
 ## :pencil: Contributing, :disappointed: Issues and :bug: Bug Reports
 The project is open to public contribution. Please feel very free to contribute.
-Experienced an issue or want to report a bug? Please, [report it here](https://github.com/wilburt/flutter_paystack/issues). Remember to be as descriptive as possible.
+Experienced an issue or want to report a bug? Please, [report it here](https://github.com/wilburt/flutter_paystack_fueld/issues). Remember to be as descriptive as possible.
 
 ## :trophy: Credits
 Thanks to the authors of Paystack [iOS](https://github.com/PaystackHQ/paystack-ios) and [Android](https://github.com/PaystackHQ/paystack-android) SDKS. I leveraged on their work to bring this plugin to fruition.

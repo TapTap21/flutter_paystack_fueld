@@ -1,4 +1,4 @@
-import 'package:flutter_paystack/src/api/model/api_response.dart';
+import 'package:flutter_paystack_fueld/src/api/model/api_response.dart';
 
 class TransactionApiResponse extends ApiResponse {
   String? reference;

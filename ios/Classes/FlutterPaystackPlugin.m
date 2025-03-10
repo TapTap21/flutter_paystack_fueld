@@ -9,7 +9,7 @@
 }
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"plugins.wilburt/flutter_paystack"
+      methodChannelWithName:@"plugins.wilburt/flutter_paystack_fueld"
             binaryMessenger:[registrar messenger]];
     UIViewController *viewController =
     [UIApplication sharedApplication].delegate.window.rootViewController;
@@ -28,17 +28,17 @@
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
   if ([@"getDeviceId" isEqualToString:call.method]) {
     result([@"iossdk_" stringByAppendingString:[[[UIDevice currentDevice] identifierForVendor] UUIDString]]);
-      
+
   } else if([@"getAuthorization" isEqualToString:call.method]) {
       NSDictionary *arguments = [call arguments];
       NSString *url = arguments[@"authUrl"];
       [self requestAuth:url result: result];
-      
+
   } else if([@"getEncryptedData" isEqualToString:call.method]) {
       NSDictionary *arguments = [call arguments];
       NSString *data = arguments[@"stringData"];
       result([PSTCKRSA encryptRSA:data]);
-      
+
   } else {
     result(FlutterMethodNotImplemented);
   }
@@ -57,7 +57,7 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         nc.modalPresentationStyle = UIModalPresentationFormSheet;
     }
-    
+
     [self->_viewController presentViewController:nc animated:YES completion:nil];
 }
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_paystack/src/widgets/base_widget.dart';
-import 'package:flutter_paystack/src/widgets/common/extensions.dart';
-import 'package:flutter_paystack/src/widgets/custom_dialog.dart';
-import 'package:flutter_paystack/src/widgets/input/pin_field.dart';
+import 'package:flutter_paystack_fueld/src/widgets/base_widget.dart';
+import 'package:flutter_paystack_fueld/src/widgets/common/extensions.dart';
+import 'package:flutter_paystack_fueld/src/widgets/custom_dialog.dart';
+import 'package:flutter_paystack_fueld/src/widgets/input/pin_field.dart';
 
 import 'buttons.dart';
 
@@ -38,7 +38,7 @@ class _PinWidgetState extends BaseState<PinWidget> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  color: context.textTheme().headline6?.color,
+                  color: context.textTheme().titleLarge?.color,
                   fontSize: 15.0,
                 ),
               ),

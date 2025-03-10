@@ -1,4 +1,4 @@
-import 'package:flutter_paystack/src/api/model/transaction_api_response.dart';
+import 'package:flutter_paystack_fueld/src/api/model/transaction_api_response.dart';
 
 abstract class CardServiceContract {
   Future<TransactionApiResponse> chargeCard(Map<String, String?> fields);

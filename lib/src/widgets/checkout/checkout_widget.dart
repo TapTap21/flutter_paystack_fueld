@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart' hide ErrorWidget;
-import 'package:flutter_paystack/src/api/service/contracts/banks_service_contract.dart';
-import 'package:flutter_paystack/src/api/service/contracts/cards_service_contract.dart';
-import 'package:flutter_paystack/src/common/paystack.dart';
-import 'package:flutter_paystack/src/common/utils.dart';
-import 'package:flutter_paystack/src/models/card.dart';
-import 'package:flutter_paystack/src/models/charge.dart';
-import 'package:flutter_paystack/src/models/checkout_response.dart';
-import 'package:flutter_paystack/src/widgets/base_widget.dart';
-import 'package:flutter_paystack/src/widgets/checkout/bank_checkout.dart';
-import 'package:flutter_paystack/src/widgets/checkout/card_checkout.dart';
-import 'package:flutter_paystack/src/widgets/checkout/checkout_method.dart';
-import 'package:flutter_paystack/src/widgets/common/extensions.dart';
-import 'package:flutter_paystack/src/widgets/custom_dialog.dart';
-import 'package:flutter_paystack/src/widgets/error_widget.dart';
-import 'package:flutter_paystack/src/widgets/sucessful_widget.dart';
+import 'package:flutter_paystack_fueld/src/api/service/contracts/banks_service_contract.dart';
+import 'package:flutter_paystack_fueld/src/api/service/contracts/cards_service_contract.dart';
+import 'package:flutter_paystack_fueld/src/common/paystack.dart';
+import 'package:flutter_paystack_fueld/src/common/utils.dart';
+import 'package:flutter_paystack_fueld/src/models/card.dart';
+import 'package:flutter_paystack_fueld/src/models/charge.dart';
+import 'package:flutter_paystack_fueld/src/models/checkout_response.dart';
+import 'package:flutter_paystack_fueld/src/widgets/base_widget.dart';
+import 'package:flutter_paystack_fueld/src/widgets/checkout/bank_checkout.dart';
+import 'package:flutter_paystack_fueld/src/widgets/checkout/card_checkout.dart';
+import 'package:flutter_paystack_fueld/src/widgets/checkout/checkout_method.dart';
+import 'package:flutter_paystack_fueld/src/widgets/common/extensions.dart';
+import 'package:flutter_paystack_fueld/src/widgets/custom_dialog.dart';
+import 'package:flutter_paystack_fueld/src/widgets/error_widget.dart';
+import 'package:flutter_paystack_fueld/src/widgets/sucessful_widget.dart';
 
 const kFullTabHeight = 74.0;
 
@@ -120,14 +120,14 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
                 child: Image.asset(
                   'assets/images/paystack_icon.png',
                   key: Key("PaystackBottomIcon"),
-                  package: 'flutter_paystack',
+                  package: 'flutter_paystack_fueld',
                   height: 16,
                 ),
               ),
             Image.asset(
               'assets/images/paystack.png',
               key: Key("PaystackLogo"),
-              package: 'flutter_paystack',
+              package: 'flutter_paystack_fueld',
               height: 15,
             )
           ],
@@ -188,7 +188,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
               Text(
                 'Pay',
                 style: TextStyle(
-                    fontSize: 14.0, color: context.textTheme().headline1?.color),
+                    fontSize: 14.0, color: context.textTheme().displayLarge?.color),
               ),
               SizedBox(
                 width: 5.0,
@@ -197,7 +197,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
                   child: Text(Utils.formatAmount(_charge.amount),
                       style: TextStyle(
                           fontSize: 15.0,
-                          color: context.textTheme().headline6?.color,
+                          color: context.textTheme().titleLarge?.color,
                           fontWeight: FontWeight.bold)))
             ],
           )
@@ -217,7 +217,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
                 Image.asset(
                   'assets/images/paystack_icon.png',
                   key: Key("PaystackIcon"),
-                  package: 'flutter_paystack',
+                  package: 'flutter_paystack_fueld',
                   width: 25,
                 )
               else
@@ -242,13 +242,13 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
       duration: const Duration(milliseconds: 300),
       curve: Curves.fastOutSlowIn,
       child: new Container(
-        color: context.colorScheme().background.withOpacity(0.5),
+        color: context.colorScheme().background.withAlpha((0.5 * 255).toInt()),
         height: _tabHeight,
         alignment: Alignment.center,
         child: new TabBar(
           controller: _tabController,
           isScrollable: true,
-          unselectedLabelColor: context.colorScheme().onBackground,
+          unselectedLabelColor: context.colorScheme().onSurface,
           labelColor: accentColor,
           labelStyle:
               new TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_paystack/src/common/utils.dart';
-import 'package:flutter_paystack/src/widgets/animated_widget.dart';
-import 'package:flutter_paystack/src/widgets/common/extensions.dart';
+import 'package:flutter_paystack_fueld/src/common/utils.dart';
+import 'package:flutter_paystack_fueld/src/widgets/animated_widget.dart';
+import 'package:flutter_paystack_fueld/src/widgets/common/extensions.dart';
 
 class SuccessfulWidget extends StatefulWidget {
   final int amount;
@@ -80,13 +80,13 @@ class _SuccessfulWidgetState extends State<SuccessfulWidget>
               'assets/images/successful.png',
               color: sceondaryColor,
               width: 50.0,
-              package: 'flutter_paystack',
+              package: 'flutter_paystack_fueld',
             ),
             sizedBox,
             Text(
               'Payment Successful',
               style: TextStyle(
-                color: context.textTheme().headline6?.color,
+                color: context.textTheme().titleLarge?.color,
                 fontWeight: FontWeight.w500,
                 fontSize: 16.0,
               ),
@@ -98,7 +98,7 @@ class _SuccessfulWidgetState extends State<SuccessfulWidget>
                 ? new Container()
                 : new Text('You paid ${Utils.formatAmount(widget.amount)}',
                     style: TextStyle(
-                      color: context.textTheme().headline6?.color,
+                      color: context.textTheme().titleLarge?.color,
                       fontWeight: FontWeight.normal,
                       fontSize: 14.0,
                     )),

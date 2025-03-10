@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_paystack/src/widgets/common/extensions.dart';
+import 'package:flutter_paystack_fueld/src/widgets/common/extensions.dart';
 
 /// This is a modification of [AlertDialog]. A lot of modifications was made. The goal is
 /// to retain the dialog feel and look while adding the close IconButton
@@ -33,7 +33,7 @@ class CustomAlertDialog extends StatelessWidget {
       children.add(new Padding(
         padding: titlePadding!,
         child: new DefaultTextStyle(
-          style: context.textTheme().headline6!,
+          style: context.textTheme().titleLarge!,
           child: new Semantics(child: title, namesRoute: true),
         ),
       ));
@@ -43,7 +43,7 @@ class CustomAlertDialog extends StatelessWidget {
       child: new Padding(
         padding: contentPadding,
         child: new DefaultTextStyle(
-          style: context.textTheme().subtitle1!,
+          style: context.textTheme().titleMedium!,
           child: content,
         ),
       ),

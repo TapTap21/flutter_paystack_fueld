@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_paystack/src/widgets/base_widget.dart';
-import 'package:flutter_paystack/src/widgets/buttons.dart';
-import 'package:flutter_paystack/src/widgets/common/extensions.dart';
-import 'package:flutter_paystack/src/widgets/custom_dialog.dart';
+import 'package:flutter_paystack_fueld/src/widgets/base_widget.dart';
+import 'package:flutter_paystack_fueld/src/widgets/buttons.dart';
+import 'package:flutter_paystack_fueld/src/widgets/common/extensions.dart';
+import 'package:flutter_paystack_fueld/src/widgets/custom_dialog.dart';
 import 'package:intl/intl.dart';
 
 const double _kPickerSheetHeight = 216.0;
@@ -38,14 +38,14 @@ class _BirthdayWidgetState extends BaseState<BirthdayWidget> {
         child: new Column(
           children: <Widget>[
             new Image.asset('assets/images/dob.png',
-                width: 30.0, package: 'flutter_paystack'),
+                width: 30.0, package: 'flutter_paystack_fueld'),
             _heightBox,
             new Text(
               widget.message,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontWeight: FontWeight.w500,
-                color: context.textTheme().headline6?.color,
+                color: context.textTheme().titleLarge?.color,
                 fontSize: 15.0,
               ),
             ),
