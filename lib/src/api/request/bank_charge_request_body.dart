@@ -8,9 +8,11 @@ class BankChargeRequestBody extends BaseRequestBody {
   String? _birthday;
   String? _token;
   String? transactionId;
+  String? _splitCode;
 
   BankChargeRequestBody(Charge charge)
       : this._accessCode = charge.accessCode!,
+        this._splitCode = charge.splitCode,
         this._account = charge.account!;
 
   Map<String, String?> tokenParams() => {fieldDevice: device, 'token': _token};
@@ -19,6 +21,9 @@ class BankChargeRequestBody extends BaseRequestBody {
   Map<String, String?> paramsMap() {
     var map = {fieldDevice: device, 'account_number': account.number};
     map['birthday'] = _birthday;
+    if (_splitCode != null && _splitCode!.isNotEmpty) {
+      map['split_code'] = _splitCode;
+    }
     return map..removeWhere((key, value) => value == null || value.isEmpty);
   }
 
@@ -29,4 +34,5 @@ class BankChargeRequestBody extends BaseRequestBody {
   BankAccount get account => _account;
 
   String get accessCode => _accessCode;
+
 }

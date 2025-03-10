@@ -21,6 +21,7 @@ class CardRequestBody extends BaseRequestBody {
   static const String fieldMetadata = "metadata";
   static const String fieldCurrency = "currency";
   static const String fieldPlan = "plan";
+  static const String fieldSplitCode = "split_code";
 
   String _clientData;
   String? _last4;
@@ -36,6 +37,7 @@ class CardRequestBody extends BaseRequestBody {
   String? _metadata;
   String? _currency;
   String? _plan;
+  String? _splitCode;
   Map<String, String?>? _additionalParameters;
 
   CardRequestBody._(this._publicKey, Charge charge, String clientData)
@@ -54,6 +56,7 @@ class CardRequestBody extends BaseRequestBody {
         this._plan = charge.plan,
         this._currency = charge.currency,
         this._accessCode = charge.accessCode,
+        this._splitCode = charge.splitCode,
         this._additionalParameters = charge.additionalParameters;
 
   static Future<CardRequestBody> getChargeRequestBody(
@@ -98,6 +101,7 @@ class CardRequestBody extends BaseRequestBody {
     params[fieldMetadata] = _metadata;
     params[fieldPlan] = _plan;
     params[fieldCurrency] = _currency;
+    params[fieldSplitCode] = _splitCode;
     params[fieldDevice] = device;
     return params..removeWhere((key, value) => value == null || value.isEmpty);
   }

@@ -24,6 +24,7 @@ class Charge {
   String? accessCode;
   String? plan;
   String? reference;
+  String? splitCode;
 
   /// ISO 4217 payment currency code (e.g USD). Defaults to [Strings.ngn].
   ///
@@ -43,7 +44,7 @@ class Charge {
     this._customFields = [];
     this._metadata!['custom_fields'] = this._customFields;
     this.locale = Strings.nigerianLocale;
-    this.currency = Strings.ngn;
+    this.currency = Strings.zar;
   }
 
   addParameter(String key, String value) {
