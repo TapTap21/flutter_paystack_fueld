@@ -43,7 +43,7 @@ class Charge {
     this._additionalParameters = {};
     this._customFields = [];
     this._metadata!['custom_fields'] = this._customFields;
-    this.locale = Strings.nigerianLocale;
+    this.locale = Strings.saLocale;
     this.currency = Strings.zar;
   }
 
