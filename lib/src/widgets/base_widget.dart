@@ -31,7 +31,8 @@ abstract class BaseState<T extends StatefulWidget> extends State<T> {
       var returnValue = getPopReturnValue();
       if (alwaysPop ||
           (returnValue != null &&
-              (returnValue is CheckoutResponse && returnValue.status == true))) {
+              (returnValue is CheckoutResponse &&
+                  returnValue.status == true))) {
         Navigator.of(context).pop(returnValue);
         return;
       }
@@ -40,44 +41,44 @@ abstract class BaseState<T extends StatefulWidget> extends State<T> {
 
       var dialog = Platform.isIOS
           ? CupertinoAlertDialog(
-        content: text,
-        actions: <Widget>[
-          CupertinoDialogAction(
-            child: const Text('Yes'),
-            isDestructiveAction: true,
-            onPressed: () {
-              Navigator.pop(context, true);
-            },
-          ),
-          CupertinoDialogAction(
-            child: const Text('No'),
-            isDefaultAction: true,
-            onPressed: () {
-              Navigator.pop(context, false);
-            },
-          ),
-        ],
-      )
+              content: text,
+              actions: <Widget>[
+                CupertinoDialogAction(
+                  child: const Text('Yes'),
+                  isDestructiveAction: true,
+                  onPressed: () {
+                    Navigator.pop(context, true);
+                  },
+                ),
+                CupertinoDialogAction(
+                  child: const Text('No'),
+                  isDefaultAction: true,
+                  onPressed: () {
+                    Navigator.pop(context, false);
+                  },
+                ),
+              ],
+            )
           : AlertDialog(
-        content: text,
-        actions: <Widget>[
-          TextButton(
-              child: const Text('NO'),
-              onPressed: () {
-                Navigator.of(context).pop(false);
-              }),
-          TextButton(
-              child: const Text('YES'),
-              onPressed: () {
-                Navigator.of(context).pop(true);
-              })
-        ],
-      );
+              content: text,
+              actions: <Widget>[
+                TextButton(
+                    child: const Text('NO'),
+                    onPressed: () {
+                      Navigator.of(context).pop(false);
+                    }),
+                TextButton(
+                    child: const Text('YES'),
+                    onPressed: () {
+                      Navigator.of(context).pop(true);
+                    })
+              ],
+            );
 
       bool exit = await showDialog<bool>(
-        context: context,
-        builder: (BuildContext context) => dialog,
-      ) ??
+            context: context,
+            builder: (BuildContext context) => dialog,
+          ) ??
           false;
 
       if (exit) {
